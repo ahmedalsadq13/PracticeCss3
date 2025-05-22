@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <style>
+      * {
+        margin: 0;
+      }
+      :root{
+
+          scroll-behavior: smooth;
+      }
+      body {
+        font-family: monospace;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      section {
+        padding: 50px 30px;
+        overflow: hidden;
+        scroll-margin:50px
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .btn,
+      button {
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        color: #fff;
+      }
+
+      input,
+      button {
+        border-radius: 20px;
+      }
+      .main-header {
+        padding: 20px;
+        align-items: center;
+        display: flex;
+        gap: 20px 70px;
+        background-color: #eee;
+        position: sticky;
+        top: 0;
+        transition: 0.3s;
+        z-index: 10;
+
+        nav ul {
+          display: flex;
+          gap: 30px;
+          text-transform: capitalize;
+          font-size: 1.2rem;
+        }
+      }
+
+      .hero {
+        position: relative;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .bg-img {
+          position: absolute;
+          inset: 0;
+
+          z-index: -1;
+        }
+
+        .hero-content {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          text-transform: uppercase;
+          align-items: stretch;
+          h2 {
+            font-size: 9rem;
+            color: #fff;
+            text-shadow: -6px 0 5px #ff376b, 6px 0 5px #00cdf8;
+            margin-block: 30px;
+            letter-spacing: 15px;
+          }
+          p {
+            color: #2cccc4;
+            font-size: 4.5rem;
+          }
+
+          form {
+            margin-block: 20px;
+
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: stretch;
+            width: clamp(30%, 2vw, 60%);
+            input {
+              padding: 10px 20px;
+            }
+            .btn {
+              background-color: #2cccc4;
+            }
+          }
+        }
+      }
+
+      .vertical-label {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        h2{
+          writing-mode: vertical-lr;
+          rotate: 180deg;
+          font-size: 4rem;
+
+        
+        }
+        button {
+          background-color: #056dc2;
+          padding: 20px 40px;
+        }
+      }
+
+      .power-of-digital {
+        background-image: linear-gradient(to bottom, #00cdf8, #223f56);
+        color: #fff;
+        font-size: 5.5rem;
+        text-align: center;
+        padding-block: 100px;
+      }
+      .our-features {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #fff4da;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          width: 100%;
+          .feat {
+            font-size: 1rem;
+            text-align: center;
+            i {
+              font-size: 3.5rem;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+      .custom-font {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        h2 {
+          font-size: 5rem;
+          max-width: 50%;
+        }
+        img {
+          max-width: 300px;
+          height: 100%;
+        }
+      }
+      .main-footer {
+        font-size: 1.2rem;
+        > div {
+          background-color: #333;
+          color: #fff;
+          padding: 50px;
+          text-align: center;
+          &:first-child {
+            border-bottom: 1px solid #eee;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="main-header">
+      <img src="/images/logo.png" alt="Company Logo" width="120" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#verticalLabel">Vertical Label</a></li>
+          <li><a href="#powerOfDigital">Power of Digital</a></li>
+          <li><a href="#ourFeatures">Our Features</a></li>
+          <li><a href="#customFont">Custom Font</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero -->
+      <section id="hero" class="hero">
+        <img src="/images/cover.jpg" alt="" class="bg-img" />
+        <div class="hero-content">
+          <h2>Coming soon</h2>
+          <p>Stay Tuned With us</p>
+
+          <form action="" method="get">
+            <input type="email" placeholder="Enter your email" />
+            <input class="btn" type="submit" value="Submit" />
+          </form>
+        </div>
+      </section>
+
+      <section id="verticalLabel" class="vertical-label">
+        <h2>Vertical Label</h2>
+        <button class="btn" type="button">Start Project</button>
+      </section>
+
+      <section id="powerOfDigital" class="power-of-digital">
+        <h2>Power of digital</h2>
+      </section>
+
+      <section id="ourFeatures" class="our-features">
+        <ul>
+          <li class="feat">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h2>Successful Projects</h2>
+          </li>
+          <li class="feat">
+            <i class="fa-solid fa-users"></i>
+            <h2>Expert team members</h2>
+          </li>
+          <li class="feat">
+            <i class="fa-solid fa-globe"></i>
+            <h2>country coverage</h2>
+          </li>
+          <li class="feat">
+            <i class="fa-solid fa-toolbox"></i>
+            <h2>years in the business</h2>
+          </li>
+        </ul>
+      </section>
+
+      <section id="customFont" class="custom-font">
+        <h2>custom font should be here</h2>
+        <img src="/images/clock.jpeg" alt="clock image" />
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+      <div>Lorem ipsum dolor sit amet.</div>
+    </footer>
+  </body>
+</html>
